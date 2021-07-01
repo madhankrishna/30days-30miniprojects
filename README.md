@@ -3,10 +3,10 @@
 # This challenge is started on July 21, 2020 📅
 
 
-## In this challenge a submitted 30 little to medium size projects. Sometimes I did a little website component or sometimes some javaScript app as a submit. I did it to boost my HTML, CSS & JS skills. Down here you will find all the live previews#30days30miniprojects challenge.
+#### In this challenge a submitted 30 little to medium size projects. Sometimes I did a little website component or sometimes some javaScript app as a submit. I did it to boost my HTML, CSS & JS skills. Down here you will find all the live previews#30days30miniprojects challenge.
 
 
 Day | Name | Preview
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+------------ | ------------- | -------------
+Content from cell 1 | Content from cell 2 | [GitHub](http://github.com)
+Content in the first column | Content in the second column |[GitHub](http://github.com)
