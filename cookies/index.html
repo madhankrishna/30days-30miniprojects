@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="stop">
+    <div class="wrapper">
+        <img src="./cookie.png" alt="">
+        <h2>Cookies Consent</h2>
+        <p>This website use cookies to ensure you get the best experience on our website.</p>
+        <div class="buttons">
+            <button class="item">I understand</button>
+            <a href="#">Learnmore</a>
+        </div>
+    </div>
+
+
+    <script>
+        const wrapper=document.querySelector(".wrapper");
+        const btn=document.querySelector(".item");
+
+        btn.addEventListener("click" ,()=>{
+            document.cookie=CookieBy="CookieBy=Madhan; max-age="+60*60*24*30;
+            if(document.cookie){
+                wrapper.classList.add("hide");
+            }
+            else{
+                alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+            }   
+        })
+
+        let check=document.cookie.indexOf("CookieBy=Madhan");
+        if(check !== -1){
+            wrapper.classList.add("hide");
+        }
+        else{
+            wrapper.classList.remove("hide");
+        }
+
+        setTimeout(() => {
+            document.body.classList.remove("stop");
+        }, 500);
+    </script>
+</body>
+</html>

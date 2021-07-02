@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <div class="card-header"><img src="./img/drawers.jpg" alt=""></div>
+        <section class="card-body">
+            <h3>Shift the overall look and feel by adding these wonderful 
+                touches to furniture in your home
+            </h3>
+            <p>
+                Ever been in a room and felt like something was missing? Perhaps 
+                it felt slightly bare and uninviting. I’ve got some simple tips 
+                to help you make any room feel complete.
+            </p>
+        </section>
+        <div class="footer">
+            <div class="profile">
+                <img id="avatar" src="./img/avatar-michelle.jpg" alt="avatar-michelle">
+                <p>
+                  <strong>Michelle Appleton</strong><br>
+                  28 Jun 2020
+                </p>
+            </div>
+            <a href="#" id="share-button">
+                <img src="./img/icon-share.svg" alt="icon-share">
+            </a>
+
+            <div class="socials">
+                <span>SHARE</span>
+                <a id="facebook" href="#"><img src="./img/icon-facebook.svg" alt="icon-facebook"></a>
+                <a id="twitter" href="#"><img src="./img/icon-twitter.svg" alt="icon-twitter"></a>
+                <a id="pinterest" href="#"><img src="./img/icon-pinterest.svg" alt="icon-pinterest"></a>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <script>
+        const shareBtn=document.querySelector('#share-button');
+        const soccial=document.querySelector(".socials");
+
+        shareBtn.addEventListener("click",()=>{
+            soccial.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
