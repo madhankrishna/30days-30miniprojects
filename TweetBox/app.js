@@ -1,0 +1,50 @@
+const wrapper = document.querySelector(".box"),
+editableInput = wrapper.querySelector(".editable"),
+readonlyInput = wrapper.querySelector(".readonly"),
+placeholder = wrapper.querySelector(".placeholder"),
+counter = wrapper.querySelector(".counter"),
+button = wrapper.querySelector("button");
+
+editableInput.onfocus=()=>{
+    placeholder.style.color="#c5ccd3";
+}
+editableInput.onkeyup = (e)=>{
+    let element = e.target;
+    validated(element);
+}
+editableInput.onblur = ()=>{
+    placeholder.style.color = "#98a5b1";
+}
+
+function validated(element){
+    let text;
+    let maxLength=100;
+    let currentLength=element.innerText.length;
+
+    if(currentLength <= 0){
+        placeholder.style.display = "block";
+        counter.style.display = "none";
+        button.classList.remove("active");
+    }else{
+        placeholder.style.display = "none";
+        counter.style.display = "block";
+        button.classList.add("active");
+    }
+
+      counter.innerText = maxLength - currentLength;
+
+    if(currentLength > maxLength){
+        let overText = element.innerText.substr(maxLength); //extracting over texts
+        overText = `<span class="highlight">${overText}</span>`; //creating new span and passing over texts
+        text = element.innerText.substr(0, maxLength) + overText; //passing overText value in textTag variable
+        readonlyInput.style.zIndex = "1";
+        counter.style.color = "#e0245e";
+        button.classList.remove("active");
+    }else{
+        readonlyInput.style.zIndex = "-1";
+        counter.style.color = "#333";
+    }
+      readonlyInput.innerHTML = text; //replacing innerHTML of readonly div with textTag value
+
+}
+
