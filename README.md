@@ -1,4 +1,4 @@
-# 30days-30miniprojects
+# [30days-30miniprojects](https://30days30miniproject.netlify.app/)
 
 # This challenge is started on June 1, 2021 📅
 
